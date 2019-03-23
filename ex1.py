@@ -1,7 +1,11 @@
-data = "abA"
-data = data.lower()
-if data == data[::-1]:
-    print("This is palindrome")
-else :
-    print("This isn't palindrome")
-# This is palindrome
+result = open("results.txt", "w")
+for number in range(1, 30000001):
+    if number % 15 == 0:
+        result.write("FizzBuzz\n")
+    elif number % 3 == 0:
+        result.write("Buzz\n")
+    elif number % 5 == 0:
+        result.write("Fizz\n")
+    else:
+        result.write(str(number) + "\n")
+result.close()
